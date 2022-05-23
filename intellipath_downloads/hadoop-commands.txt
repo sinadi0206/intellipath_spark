@@ -1,0 +1,87 @@
+Step 1: Run the following command to start the hadoop cluster:
+
+    $ start-dfs.sh 
+
+    #You should get the following output:
+   	 Starting namenodes on [localhost]
+    	Starting datanodes
+    	Starting secondary namenodes [intellipaat-hadoop]
+
+Step 2: Next, start the YARN service as shown below:
+
+    $ start-yarn.sh 
+        #You should get the following output:
+        	Starting resourcemanager
+        	Starting nodemanagers
+
+You can now check the status of all Hadoop services using the jps command:
+
+    $ jps
+
+Note:-
+==========================
+To access the Namenode, open your web browser and visit the URL 
+	localhost:9870
+
+The YARN Resource Manager is accessible on port 8088:
+	localhost:8088
+
+The default port 9864 is used to access individual DataNodes directly from your browser:
+	localhost:9864
+
+To stop the Hadoop Namenode service, run the following command as a hadoop user:
+
+      $ stop-dfs.sh
+
+To stop the Hadoop Resource Manager service, run the following command:
+
+     $ stop-yarn.sh 
+================================
+
+-------------
+   $ sqoop version
+===
+   $ pig
+===
+Please run below command to start Hive-metastore
+
+  $ hive --service metastore
+
+And then access hive-shell using below command
+
+  $ hive
+
+===
+   $ flume-ng version
+===
+Hadoop and Hbase should be running before you can use HBase shell. 
+Here the correct order of starting services.
+
+	$ start-all.sh
+
+	$ start-hbase.sh
+
+     Then use HBase shell.
+
+	$ hbase shell
+
+   To stop
+
+	$ stop-hbase.sh
+====================
+Scala:
+
+	$ scala -version
+
+To start Spark
+
+	$ spark-shell
+
+Spark-UI
+
+	$ start-master.sh
+
+To access the Spark UI, open your web browser and visit the URL 
+	http://localhost:4040
+
+	$ stop-master.sh

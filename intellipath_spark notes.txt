@@ -1,0 +1,8 @@
+adding files to remote repository: git add * / git add file name
+commiting : commit -m "comment"
+pushing files to repo/branch: git push or git push origin master / 
+
+########################################
+intellipath
+id: kvnp89@gmail.com 
+pwd: intel@123
